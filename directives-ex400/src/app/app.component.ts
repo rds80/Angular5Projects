@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  selectedAnimal = 'cat';
+  animals=['cat','dog','zebra','giraffe'];
+  onAnimalClicked(event:Event) {
+    const clickedAnimal = event.srcElement.innerHTML.trim();
+    this.selectedAnimal = clickedAnimal;
+  }
+  
+
 }
