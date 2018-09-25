@@ -7,17 +7,18 @@ import { Component, OnInit } from '@angular/core';
       <p>
         [customer list]
       </p>
-      <app-customer>
-      </app-customer>
-      <app-customer>
-      </app-customer>
-      <app-customer>
-      </app-customer>            
+      <app-customer *ngFor="let customer of customerList" [customer]="customer">
+      </app-customer>       
     </div>
   `,
   styles: ['.customerList{background-color:#8oced6;margin:10px;padding:10px}']
 })
 export class CustomerListComponent implements OnInit {
+  private customerList = [
+    {name: 'Brian', city: 'Atlanta'},
+    {name: 'Peter', city: 'San Francisco'},
+    {name: 'Janet', city: 'Colorado'}
+  ]
 
   constructor() { }
 
