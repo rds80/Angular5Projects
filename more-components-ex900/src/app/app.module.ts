@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { HovererDirective } from './hoverer.directive';
+import { AppComponent, Paragraph } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HovererDirective
+    Paragraph
   ],
   imports: [
     BrowserModule
